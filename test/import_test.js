@@ -2,47 +2,137 @@
 
 var grunt = require('grunt');
 
-/*
-  ======== A Handy Little Nodeunit Reference ========
-  https://github.com/caolan/nodeunit
-
-  Test methods:
-    test.expect(numAssertions)
-    test.done()
-  Test assertions:
-    test.ok(value, [message])
-    test.equal(actual, expected, [message])
-    test.notEqual(actual, expected, [message])
-    test.deepEqual(actual, expected, [message])
-    test.notDeepEqual(actual, expected, [message])
-    test.strictEqual(actual, expected, [message])
-    test.notStrictEqual(actual, expected, [message])
-    test.throws(block, [error], [message])
-    test.doesNotThrow(block, [error], [message])
-    test.ifError(value)
-*/
-
 exports.import = {
-  setUp: function(done) {
-    // setup here if necessary
-    done();
-  },
-  default_options: function(test) {
-    test.expect(1);
 
-    var actual = grunt.file.read('tmp/default_options');
-    var expected = grunt.file.read('test/expected/default_options');
-    test.equal(actual, expected, 'should describe what the default behavior is.');
+	'forty-two': function(test) {
 
-    test.done();
-  },
-  custom_options: function(test) {
-    test.expect(1);
+		test.equal(
+			grunt.file.read('tmp/forty-two.js'),
+			grunt.file.read('test/expected/forty-two.js'),
+			'should describe what the default behavior is.'
+		);
 
-    var actual = grunt.file.read('tmp/custom_options');
-    var expected = grunt.file.read('test/expected/custom_options');
-    test.equal(actual, expected, 'should describe what the custom option(s) behavior is.');
+		test.done();
+	},
+	
+	'import-empty-lines': function(test) {
 
-    test.done();
-  },
+		test.equal(
+			grunt.file.read('tmp/import-empty-lines.js'),
+			grunt.file.read('test/expected/import-empty-lines.js'),
+			'should describe what the default behavior is.'
+		);
+
+		test.done();
+	},
+	
+	'imports-circular-bar': function(test) {
+
+		test.equal(
+			grunt.file.read('tmp/imports-circular-bar.js'),
+			grunt.file.read('test/expected/imports-circular-bar.js'),
+			'should describe what the default behavior is.'
+		);
+
+		test.done();
+	},
+	
+	'imports-circular-foo': function(test) {
+
+		test.equal(
+			grunt.file.read('tmp/imports-circular-foo.js'),
+			grunt.file.read('test/expected/imports-circular-foo.js'),
+			'should describe what the default behavior is.'
+		);
+
+		test.done();
+	},
+	
+	'imports-foo-bar-baz': function(test) {
+
+		test.equal(
+			grunt.file.read('tmp/imports-foo-bar-baz.js'),
+			grunt.file.read('test/expected/imports-foo-bar-baz.js'),
+			'should describe what the default behavior is.'
+		);
+
+		test.done();
+	},
+	
+	'imports-foo-foo-bar-foo': function(test) {
+
+		test.equal(
+			grunt.file.read('tmp/imports-foo-foo-bar-foo.js'),
+			grunt.file.read('test/expected/imports-foo-foo-bar-foo.js'),
+			'should describe what the default behavior is.'
+		);
+
+		test.done();
+	},
+	
+	'imports-foo': function(test) {
+
+		test.equal(
+			grunt.file.read('tmp/imports-foo.js'),
+			grunt.file.read('test/expected/imports-foo.js'),
+			'should describe what the default behavior is.'
+		);
+
+		test.done();
+	},
+	
+	'imports-imports-foo': function(test) {
+
+		test.equal(
+			grunt.file.read('tmp/imports-imports-foo.js'),
+			grunt.file.read('test/expected/imports-imports-foo.js'),
+			'should describe what the default behavior is.'
+		);
+
+		test.done();
+	},
+	
+	'imports-not-found': function(test) {
+
+		test.equal(
+			grunt.file.read('tmp/imports-not-found.js'),
+			grunt.file.read('test/expected/imports-not-found.js'),
+			'should describe what the default behavior is.'
+		);
+
+		test.done();
+	},
+	
+	'imports-self': function(test) {
+
+		test.equal(
+			grunt.file.read('tmp/imports-self.js'),
+			grunt.file.read('test/expected/imports-self.js'),
+			'should describe what the default behavior is.'
+		);
+
+		test.done();
+	},
+	
+	'invalid-import-syntax': function(test) {
+
+		test.equal(
+			grunt.file.read('tmp/invalid-import-syntax.js'),
+			grunt.file.read('test/expected/invalid-import-syntax.js'),
+			'should describe what the default behavior is.'
+		);
+
+		test.done();
+	},
+	
+	'trailing-comment-import': function(test) {
+
+		test.equal(
+			grunt.file.read('tmp/trailing-comment-import.js'),
+			grunt.file.read('test/expected/trailing-comment-import.js'),
+			'should describe what the default behavior is.'
+		);
+
+		test.done();
+	}
 };
