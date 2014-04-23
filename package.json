@@ -1,23 +1,23 @@
 {
-  "name": "grunt-import",
+  "name": "grunt-importjs",
   "description": "Grunt plugin for import.",
   "version": "0.1.0",
-  "homepage": "https://github.com/hirokiosame/grunt-import",
+  "homepage": "https://github.com/hirokiosame/grunt-importjs",
   "author": {
     "name": "Hiroki Osame",
     "email": "hirokio@bu.edu"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hirokiosame/grunt-import.git"
+    "url": "git://github.com/hirokiosame/grunt-importjs.git"
   },
   "bugs": {
-    "url": "https://github.com/hirokiosame/grunt-import/issues"
+    "url": "https://github.com/hirokiosame/grunt-importjs/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/hirokiosame/grunt-import/blob/master/LICENSE-MIT"
+      "url": "https://github.com/hirokiosame/grunt-importjs/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {
